@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> <!-- Verknüpfung mit CSS -->
+</head>
+<body>
+    <h1>Hallo {{ name }}!</h1>
+    <a href="{{ link }}">Auswertung</a> <!-- Link / URL zur Funktion Auswertung -->
+<!-- Dazu wählt der Nutzer die Sportart aus, macht Angaben über die Intension, die zurückgelegten Kilometer, die verbrannten Kalorien und die Länge des Trainings. -->
+    <form method="POST">
+        <input type="text" sportart="Sportart" placeholder="Bitte gebe die getätigte Sportart ein.">
+        <input type="text" intension="Intension" placeholder="Bitte gebe die Intension ein.">
+        <input type="text" km="Kilometer" placeholder="Bitte gebe die Anzahl zurückgelegte Kilometer ein.">
+        <input type="text" kal="Kalorien" placeholder="Bitte gebe die Anzahl verbrannter Kalorien ein.">
+        <input type="text" laenge="Trainingsdauer" placeholder="Bitte gebe die Trainingsdauer in Minuten ein.">
+        <button type="submit">Senden</button>
+    </form>
+    <ul>
+        {% for ding in dinger %}
+            <li>{{ ding }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
