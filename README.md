@@ -50,5 +50,7 @@ Sportarten: run, bike, weights, hike, yoga, tennis
  - Was wurde nicht gelöst
  - Welche Verbesserungen könnten noch gemacht werden
  
+Grafik einbauen
+
 **fett**
 _kursiv_
