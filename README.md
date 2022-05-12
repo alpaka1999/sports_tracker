@@ -6,8 +6,8 @@
  - Lückenfüller wie: "Dieses Projekt wurde im Rahmen des Programmieren2 Modules an der FHGR gemacht" oder ähnlich sind unnötig. Auch sollten keine Klarnamen, oder Orte genannt werden.
 
 Im Rahmen des Moduls PROG2 hatten die Studierenden den Auftrag, 
-eine Webapp zu erstellen, die Daten speichern, 
-verarbeiten und wiedergeben kann.
+eine Webapp zu erstellen, die Daten speichern, verarbeiten und 
+wiedergeben kann.
 
 Meine Idee ist ein Sport Tracker, der wie eine Fitbit 
 Sportdaten eines Nutzers über ein Webformular entgegennimmt, 
