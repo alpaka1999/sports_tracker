@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Uebersicht</title>
-</head>
-<body>
-<h1>Hallo {{ name }}!</h1>
+<!-- Übernahme header -->
+{% include "header.html" %}
+<!-- was macht Seite?-->
+{% block content %}
+<div class="container">
 {{ viz_div|safe }}
-</body>
-</html>
+</div>
+{% endblock %}
+<!-- Übernahme footer -->
+{% include "footer.html" %}

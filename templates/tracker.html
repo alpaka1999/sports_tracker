@@ -1,0 +1,17 @@
+<!-- Übernahme header -->
+{% include "header.html" %}
+<!-- was macht Seite?-->
+{% block content %}
+<div class="container">
+    <form method="POST">
+        <input type="text" sportart="Sportart" placeholder="Bitte gebe die getätigte Sportart ein.">
+        <input type="text" intension="Intension" placeholder="Bitte gebe die Intension ein.">
+        <input type="text" km="Kilometer" placeholder="Bitte gebe die Anzahl zurückgelegte Kilometer ein.">
+        <input type="text" kal="Kalorien" placeholder="Bitte gebe die Anzahl verbrannter Kalorien ein.">
+        <input type="text" laenge="Trainingsdauer" placeholder="Bitte gebe die Trainingsdauer in Minuten ein.">
+        <button type="submit">Senden</button>
+    </form>
+</div>
+{% endblock %}
+<!-- Übernahme footer -->
+{% include "footer.html" %}
