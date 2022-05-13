@@ -1,17 +1,19 @@
 <!-- Übernahme header -->
 {% include "header.html" %}
-<!-- Diese Seite ist die Startseite des Sport Trackers, wo der User auf die verschiedenen Bereiche des
- Sport Trackers wechseln kann. --->
+<!-- Diese Seite ist die Startseite des Sport Trackers. Von hier aus kann der User auf die verschiedenen Bereiche des
+ Sport Trackers wechseln. --->
 {% block content %}
 <div class="container">
+    </br>
     <h1>Hallo {{ user }} und herzlich Willkommen bei deinem Sports Tracker</h1>
     <p>Auf deinem persönlichen Sports Tracker kannst du deine Sportarten ganz einfach tracken und auswerten.</p>
+    </br>
     <div class="row">
         <div class="col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Neuer Eintrag</h5>
-                    <p class="card-text">Hier kannst du neue Daten zu deine letzten Sportaktivität erfassen.</p>
+                    <p class="card-text">Erstelle einen neuen Eintrag, um die Daten deiner letzten Sportaktivität zu erfassen.</p>
                     <a href="{{ url_for('tracker') }}" class="btn btn-primary">Neuer Eintrag erstellen</a>
                 </div>
             </div>
@@ -20,7 +22,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Übersicht</h5>
-                    <p class="card-text">Auf der Übersicht siehst du alle deine erfassten Daten, sortiert nach Eingabedatum. Die Datan kannst du hier ganz eifnach nach Sportart filtern.</p>
+                    <p class="card-text">In der Übersicht findest du all deine erfassten Tracking-Daten, sortiert nach Erfassungsdatum.</p>
                     <a href="{{ url_for('uebersicht') }}" class="btn btn-primary">Zur Übersicht</a>
                 </div>
             </div>
@@ -29,7 +31,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Auswertung</h5>
-                    <p class="card-text">Bei der Auswertung siehst du eine Statistik deine erfassten Daten in Form von einem Diagramm.</p>
+                    <p class="card-text">Bei der Auswertung kannst du deine Daten ganz einfach in einer Statistik in Form von einem Diagramm einsehen.</p>
                     <a href="{{ url_for('auswertung') }}" class="btn btn-primary">Zur Auswertung</a>
                 </div>
             </div>

@@ -30,7 +30,7 @@ neues Sportarten-Tracking wechsel. Dort kann der Nutzer bei der Dateneingabe
 die absolvierte Sportart auswählen. Dabei kann der Nutzer zwischen folgenden 
 Sportarten unterscheiden: Laufen, Fahrradfahren, Wandern, Tennis, Schwimmen
 und Workout. Anschliessend macht der Nutzer Angaben über die Tageszeit, 
-die Länge des Trainings, die zurückgelegten Kilometer, die Intension und die 
+die Länge des Trainings, die zurückgelegten Kilometer, die Intensivität und die 
 verbrannten Kalorien. Abgespeichert werden die Daten in einem Json-File, 
 welches in der Übersicht visualisiert betrachtet werden kann.
 

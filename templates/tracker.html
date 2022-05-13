@@ -1,17 +1,63 @@
 <!-- Übernahme header -->
 {% include "header.html" %}
-<!-- was macht Seite?-->
+<!-- Dies ist die Formularseite zur Erstellung von neuen Einträgen. Die Daten von Sportaivitäten können hier erfasst werden. -->
 {% block content %}
 <div class="container">
-    <form method="POST">
-        <input type="text" sportart="Sportart" placeholder="Bitte gebe die getätigte Sportart ein.">
-        <input type="text" intension="Intension" placeholder="Bitte gebe die Intension ein.">
-        <input type="text" km="Kilometer" placeholder="Bitte gebe die Anzahl zurückgelegte Kilometer ein.">
-        <input type="text" kal="Kalorien" placeholder="Bitte gebe die Anzahl verbrannter Kalorien ein.">
-        <input type="text" laenge="Trainingsdauer" placeholder="Bitte gebe die Trainingsdauer in Minuten ein.">
-        <button type="submit">Senden</button>
+    </br>
+    <h1>Neuer Eintrag</h1>
+    <p>Fülle das Formular aus, um die Daten deiner letzten Sportaktivität zu erfassen.</p>
+    <p style="color: green;"><i>{{ success_message }}</i></p>
+    </br>
+    <!-- NOTE: ergänzen, was das Formular macht. vas-validated führt dazu, dass bei fehlenden Daten ein Hinweis zur Ausfüllung vom Feld angezeigt wird. -->
+    <form method="POST" class="was-validated">
+        <div class="form-group">
+            <label for="sportart">Welche Sportart hast du durchgeführt?</label>
+            <select class="form-control" name="sportart" id="sportart" required>
+                <option value="" selected>Wähle deine durchgeführte Sportart aus.</option>
+                <option value="laufen">Laufen</option>
+                <option value="fahrradfahren">Fahrradfahren</option>
+                <option value="wandern">Wandern</option>
+                <option value="tennis">Tennis</option>
+                <option value="workout">Workout</option>
+            </select>
+            <div class="invalid-feedback">Sportart wählen</div>
+        </div>
+        <div class="form-group">
+            <label for="intensivitaet">Wie intensiv war dein Training?</label>
+            <select class="form-control" name="intensivitaet" id="intensivitaet" required>
+                <option value="" selected>Wähle den Grad der Intensivität deines Trainings aus. </option>
+                <option value="hart">hart</option>
+                <option value="mittel">mittel</option>
+                <option value="leicht">leicht</option>
+            </select>
+            <div class="invalid-feedback">Intensität angeben</div>
+        </div>
+        <div class="form-group">
+            <label for="datum">Wann hast du die Sportart ausgeführt?</label>
+            <input type="date" name="datum" class="form-control" id="datum" placeholder="Datum" required>
+            <div class="invalid-feedback">Datum eingeben</div>
+        </div>
+        <div class="form-group">
+            <label for="dauer">Wie lange dauerte dein Training?</label>
+            <input type="number" name="dauer" class="form-control" id="dauer" placeholder="Zeit in Minuten" required>
+            <div class="invalid-feedback">Dauer eingeben</div>
+        </div>
+        <div class="form-group">
+            <label for="distanz">Wie viele Schritte hast du während dem Training zurückgelegt?</label>
+            <input type="number" name="distanz" class="form-control" id="distanz" placeholder="Anzahl Schritte" required>
+            <div class="invalid-feedback">Anzahl Schritte eingeben</div>
+        </div>
+        <div class="form-group">
+            <label for="kalorien">Wie viele Kalorien hast du während dem Training verbrannt?</label>
+            <input type="number" name="kalorien" class="form-control" id="kalorien" placeholder="Anzahl Kalorien" required>
+            <div class="invalid-feedback">Anzahl verbrannte Kalorien eingeben</div>
+        </div>
+        </br>
+        <button type="submit" class="btn btn-primary">Daten speichern</button>
     </form>
 </div>
 {% endblock %}
 <!-- Übernahme footer -->
 {% include "footer.html" %}
+
+<!-- ACHTUNG: Nach Erfassung muss noch Speicherung der Daten in Betracht gezogen werden!!! -->
