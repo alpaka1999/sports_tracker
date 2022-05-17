@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+import daten
 
 #ACHTUNG: Plotly noch nur aus Schulbeispiel, noch nicht zu benztzen
 import plotly.express as px
@@ -37,24 +38,31 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template("500.html"), 500
 
-#Startseite / Home
+#Startseite / Home: Uebersichtsseite mit allen Aktivitäten der Applikation
 @app.route('/')
 def home():
     return render_template("index.html", user="Selina")
 
-#Formularseite "Neuer Eintrag"
-#NOTE: Datenspeicherung ergänzen!!!!
+#Formularseite "Neuer Eintrag": hier kann der User neue Sportdaten erfassen
 @app.route('/tracker', methods=["GET", "POST"])
 def tracker():
-    if request.method == 'POST':
-        tracking_datum = request.form['datum']
-        rueckgabe_string = "Deine Daten zu deinem Training vom " + tracking_datum + " wurden gespeichert."
+    if request.method == 'POST': #wenn der Button "Daten speichern" gedrückt wird
+        sportart = request.form['sportart']
+        intensivitaet = request.form['intensivitaet']
+        datum = request.form['datum']
+        dauer = request.form['dauer']
+        distanz = request.form['distanz']
+        kalorien = request.form['kalorien']
+        #Speicherung der Daten
+        daten.speichern(sportart, intensivitaet, datum, dauer, distanz, kalorien)
+        #Rückgabe-Message nachdem der Button "Daten speichern" gedrückt wird
+        rueckgabe_string = "Deine Daten zu deinem Training vom " + datum + " wurden gespeichert."
         return render_template("tracker.html", success_message=rueckgabe_string)
     else:
         return render_template("tracker.html")
 
-#Überesichts Seite mit Übersicht der Erfassten Daten
-#NOTE: noch nicht fertig
+#Überesichtsseite: Übersicht der Erfassten Daten aus sport_data.json
+#NOTE: noch nicht fertig -> siehe odoni persistente Daten 12 main
 @app.route("/uebersicht")
 def uebersicht():
     return render_template("uebersicht.html")
