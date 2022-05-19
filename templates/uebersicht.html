@@ -7,7 +7,30 @@
     <h1>Seite in Bearbeitung</h1>
     <p>Untertitel</p>
     </br>
-    <!-- wie kann ich Daten hier anzeigen?? In Form von einer Liste? -->
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sportart</th>
+            <th scope="col">Intensivität</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Dauer</th>
+            <th scope="col">Distanz</th>
+            <th scope="col">Kalorien</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, value in eingabe.items() %}
+        <tr>
+            <td>{{ value["Sportart"] }}</td>
+            <td>{{ value["Intensivitaet"] }}</td>
+            <td>{{ value["Datum"] }}</td>
+            <td>{{ value["Dauer"] }}</td>
+            <td>{{ value["Distanz"] }}</td>
+            <td>{{ value["Kalorien"] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}
 <!-- Übernahme footer -->

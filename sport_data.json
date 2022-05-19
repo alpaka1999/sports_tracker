@@ -1,0 +1,18 @@
+{
+    "2022-05-19 13:42:05.801833": {
+        "Sportart": "fahrradfahren",
+        "Intensivit\u00e4t": "mittel",
+        "Datum": "2022-05-18",
+        "Dauer": "3545",
+        "Distanz": "56675",
+        "Kalorien": "78868"
+    },
+    "2022-05-19 16:21:22.353554": {
+        "Sportart": "laufen",
+        "Intensivitaet": "mittel",
+        "Datum": "2022-05-18",
+        "Dauer": "55",
+        "Distanz": "2000",
+        "Kalorien": "200"
+    }
+}

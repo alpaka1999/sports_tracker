@@ -11,23 +11,24 @@ def speichern(sportart, intensivitaet, datum, dauer, distanz, kalorien):
     except FileNotFoundError:
         datei_inhalt = {}
 
-#als Key wird das Erfassungsdatum der Daten eingegeben
+#als Key wird das Erfassungsdatum der Daten eingegeben mit datetime.now()
     datei_inhalt[str(datetime.now())] = {"Sportart": sportart,
-                                         "Intensivität": intensivitaet,
+                                         "Intensivitaet": intensivitaet,
                                          "Datum": datum,
                                          "Dauer": dauer,
                                          "Distanz": distanz,
                                          "Kalorien": kalorien
                                          }
-
+#"w" = write
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file, indent=4)
 
-#Funktion, um gespeicherte Daten laden zu können
+#Funktion, um gespeicherte Daten aus dem json laden zu können
 def laden():
     datei_name = "sport_data.json"
     try:
-        with open(datei_name) as open_file:
+        # "r" = read
+        with open(datei_name, "r") as open_file:
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = {}

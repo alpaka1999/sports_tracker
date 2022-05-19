@@ -62,13 +62,15 @@ def tracker():
         return render_template("tracker.html")
 
 #Überesichtsseite: Übersicht der Erfassten Daten aus sport_data.json
-#NOTE: noch nicht fertig -> siehe odoni persistente Daten 12 main
 @app.route("/uebersicht")
 def uebersicht():
-    return render_template("uebersicht.html")
+    eingabe = daten.laden()
+    return render_template("uebersicht.html", eingabe=eingabe)
 
 #ERGAENZEN: Titel
 #NOTE: noch nicht fertig
+#Rangliste mit Top-Sportarten -> Welche Art von Daten möchte ich analysieren (ob Text oder Diagramm ist egal)
+#kann 1-2 Diagramme sein
 @app.route("/auswertung")
 def auswertung():
     div = viz()
