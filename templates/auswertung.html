@@ -4,11 +4,14 @@
 {% block content %}
 <div class="container">
     </br>
-    <h1>Seite in Bearbeitung</h1>
-    <p>Untertitel</p>
+    <h1>Auswertung: Seite in Bearbeitung</h1>
+    <p>ANPASSEN: Hier kannst du deine Daten ausgewertet einsehen.</p>
     </br>
-    <!-- nur ein Versuch aus Vorlesung -> siehe auch Main! Frage: wo speichere ich die Main Daten? in neuem .py File? -->
-    {{ viz_div|safe }}
+    <div class="row">
+        <div class="col">
+            {{ viz_div|safe }} <!-- Pie-Chart Diagramm -->
+        </div>
+    </div>
 </div>
 {% endblock %}
 <!-- Übernahme footer -->

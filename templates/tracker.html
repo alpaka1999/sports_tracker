@@ -5,10 +5,11 @@
 <div class="container">
     </br>
     <h1>Neuer Eintrag</h1>
-    <p>Fülle das Formular aus, um die Daten deiner letzten Sportaktivität zu erfassen.</p>
+    <p>Fülle das Formular aus, um die Daten deiner Sportaktivitäten zu erfassen.</p>
+    <!-- hier erscheint nach nachdem der Button "Daten speichern" gedrückt wird die success_message aus main.py  -->
     <p style="color: green;"><i>{{ success_message }}</i></p>
     </br>
-    <!-- NOTE: ergänzen, was das Formular macht. vas-validated führt dazu, dass bei fehlenden Daten ein Hinweis zur Ausfüllung vom Feld angezeigt wird. -->
+    <!-- Die Klasse was-validated führt dazu, dass bei fehlenden Daten ein Hinweis zur Ausfüllung vom Feld angezeigt wird -->
     <form method="POST" class="was-validated">
         <div class="form-group">
             <label for="sportart">Welche Sportart hast du durchgeführt?</label>
