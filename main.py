@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 
 import piechart
+import scatterplot
 import daten
 
 app = Flask("Sports tracker")
@@ -13,18 +14,17 @@ PROG1 und PROG2 sowie die Tutoring-Sessions genutzt. Weitere Quellen wie Youtube
 stackoverflow, die Bootstrap Dokumentation oder w3schools wurden für die Ausarbeitung des Projekts beigezogen.
 """
 
-#Custom Error Pages: 404 & 500
-#Invalid URL: 404
+#Custom Error Page: Invalid URL: 404
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
 
-#Internal Server Error: 500
+#Custom Error Page: Internal Server Error: 500
 @app.errorhandler(500)
-def page_not_found(e):
+def internal_server_error(e):
     return render_template("500.html"), 500
 
-#Startseite / Home: Uebersichtsseite mit allen Aktivitäten, die in der Applikation vorgenommen werden können
+#Startseite / Home: Übersichtsseite mit allen Aktivitäten, die in der Applikation vorgenommen werden können
 @app.route('/')
 def home():
     return render_template("index.html", user="Selina")
@@ -42,7 +42,7 @@ def tracker():
         dauer = request.form['dauer']
         distanz = request.form['distanz']
         kalorien = request.form['kalorien']
-        #Speicherung der Daten als in sport_data.json (siehe daten.py)
+        #Speicherung der Daten in sport_data.json (siehe daten.py)
         daten.speichern(sportart, intensivitaet, datum, dauer, distanz, kalorien)
         #Rückgabe-Message nachdem der Button "Daten speichern" gedrückt wird
         rueckgabe_string = "Deine Daten zu deinem Training vom " + datum + " wurden gespeichert."
@@ -55,18 +55,18 @@ def tracker():
 @app.route("/uebersicht")
 def uebersicht():
     eingabe = daten.laden()
-    #1. eingabe bezieht sich auf eingabe in uebersicht.html. 2. eingabe auf daten.laden() hier im main
+    #1. Eingabe bezieht sich auf eingabe in uebersicht.html. 2. Eingabe auf daten.laden() hier im main
     return render_template("uebersicht.html", eingabe=eingabe)
 
-#Auswertungsseite: Auswertungen mit Kreisdiagramm und xy...
+#Auswertungsseite: Auswertungen mit Kreisdiagramm, Scatter Plot und Rangliste in Form von Tabelle
 #NOTE: noch nicht fertig
-#Ideen: Rangliste mit Top-Sportarten
-#Idee: oben eingeben: ich möchte Sportart laufen und dann zeigts alle Daten laufen oder ich will nur Daten von Mai
-#Welche Art von Daten möchte ich analysieren (ob Text oder Diagramm ist egal kann 1-2 Diagramme sein)
+#Idee: Rangliste mit Top-Sportarten: Durchschnittswerte von Sportarten werden angezeigt (for loop? leeres dict? leere liste?).
+#Idee: dann wird min / max, wie viele trackings pro Sportart, durchschnittsdauer, distanz und kal. angezeigt
 @app.route("/auswertung")
 def auswertung():
-    div = piechart.viz() #Kreisdiagramm (siehe piechart.py)
-    return render_template("auswertung.html", viz_div=div)
+    div1 = piechart.viz() #Kreisdiagramm (siehe piechart.py)
+    div2 = scatterplot.viz() #Scatter Plot (siehe scatterplot.py)
+    return render_template("auswertung.html", viz_div1=div1, viz_div2=div2)
 
 #Zum Öffnen der Startseite des Projekts kann im Browser http://127.0.0.1:5000 aufgerufen werden
 if __name__ == "__main__":

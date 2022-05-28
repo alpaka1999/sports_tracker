@@ -3,72 +3,96 @@
         "Sportart": "laufen",
         "Intensivitaet": "mittel",
         "Datum": "2022-05-18",
-        "Dauer": "55",
-        "Distanz": "2000",
-        "Kalorien": "200"
+        "Dauer": 55,
+        "Distanz": 2000,
+        "Kalorien": 200
     },
     "2022-05-26 09:57:18.077646": {
         "Sportart": "wandern",
         "Intensivitaet": "hart",
         "Datum": "2022-05-25",
-        "Dauer": "280",
-        "Distanz": "30000",
-        "Kalorien": "750"
+        "Dauer": 280,
+        "Distanz": 30000,
+        "Kalorien": 750
     },
     "2022-05-26 10:43:01.483923": {
         "Sportart": "tennis",
         "Intensivitaet": "leicht",
         "Datum": "2022-05-26",
-        "Dauer": "60",
-        "Distanz": "350",
-        "Kalorien": "50"
+        "Dauer": 60,
+        "Distanz": 350,
+        "Kalorien": 50
     },
     "2022-05-26 10:43:27.329469": {
         "Sportart": "workout",
         "Intensivitaet": "mittel",
         "Datum": "2022-05-26",
-        "Dauer": "15",
-        "Distanz": "40",
-        "Kalorien": "25"
+        "Dauer": 15,
+        "Distanz": 40,
+        "Kalorien": 25
     },
     "2022-05-26 10:43:53.555884": {
         "Sportart": "fahrradfahren",
         "Intensivitaet": "hart",
         "Datum": "2022-04-30",
-        "Dauer": "120",
-        "Distanz": "550",
-        "Kalorien": "1000"
+        "Dauer": 120,
+        "Distanz": 550,
+        "Kalorien": 1000
     },
     "2022-05-26 16:03:17.174696": {
         "Sportart": "workout",
         "Intensivitaet": "hart",
         "Datum": "2022-04-25",
-        "Dauer": "60",
-        "Distanz": "450",
-        "Kalorien": "200"
+        "Dauer": 60,
+        "Distanz": 450,
+        "Kalorien": 200
     },
     "2022-05-26 16:03:42.711076": {
         "Sportart": "tennis",
         "Intensivitaet": "leicht",
         "Datum": "2022-04-06",
-        "Dauer": "180",
-        "Distanz": "2000",
-        "Kalorien": "1500"
+        "Dauer": 180,
+        "Distanz": 2000,
+        "Kalorien": 1500
     },
     "2022-05-26 16:06:12.442892": {
         "Sportart": "laufen",
         "Intensivitaet": "hart",
         "Datum": "2022-05-15",
-        "Dauer": "120",
-        "Distanz": "10500",
-        "Kalorien": "300"
+        "Dauer": 120,
+        "Distanz": 10500,
+        "Kalorien": 300
     },
     "2022-05-26 16:16:24.565445": {
         "Sportart": "laufen",
         "Intensivitaet": "hart",
         "Datum": "2022-03-24",
-        "Dauer": "60",
-        "Distanz": "10000",
-        "Kalorien": "660"
+        "Dauer": 60,
+        "Distanz": 10000,
+        "Kalorien": 660
+    },
+    "2022-05-27 22:39:17.982589": {
+        "Sportart": "wandern",
+        "Intensivitaet": "mittel",
+        "Datum": "2022-05-19",
+        "Dauer": 123,
+        "Distanz": 5132,
+        "Kalorien": 1245
+    },
+    "2022-05-28 16:32:34.351043": {
+        "Sportart": "wandern",
+        "Intensivitaet": "mittel",
+        "Datum": "2022-05-19",
+        "Dauer": 123,
+        "Distanz": 321,
+        "Kalorien": 11
+    },
+    "2022-05-28 21:50:07.786198": {
+        "Sportart": "workout",
+        "Intensivitaet": "hart",
+        "Datum": "2022-05-27",
+        "Dauer": 120,
+        "Distanz": 500,
+        "Kalorien": 1200
     }
 }

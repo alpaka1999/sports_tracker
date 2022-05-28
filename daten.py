@@ -6,31 +6,29 @@ import json
 def speichern(sportart, intensivitaet, datum, dauer, distanz, kalorien):
     datei = "sport_data.json"
     try:
-        #"r" = read file in "read-only" mode
-        with open(datei, "r") as open_file:
+        with open(datei, "r") as open_file: #"r" = read file in "read-only" mode
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = {}
 
-    #erstellt im json ein dict mit den Inhalten pro Eingabe in tracker.html
+    #erstellt im json ein dict mit den Inhalten pro Eingabe unter tracker.html
     #als Key für die json-Datei wird das Erfassungsdatum der Daten erfasst mit datetime.now()
     datei_inhalt[str(datetime.now())] = {"Sportart": sportart,
                                          "Intensivitaet": intensivitaet,
                                          "Datum": datum,
-                                         "Dauer": dauer,
-                                         "Distanz": distanz,
-                                         "Kalorien": kalorien
+                                         "Dauer": int(dauer),
+                                         "Distanz": int(distanz),
+                                         "Kalorien": int(kalorien)
                                          }
-    #"w" = write file (neue Daten werden in json-Datei gespeichert)
-    with open(datei, "w") as open_file:
+
+    with open(datei, "w") as open_file: #"w" = write file (neue Daten werden in json-Datei gespeichert)
         json.dump(datei_inhalt, open_file, indent=4)
 
 #Funktion, um gespeicherte Daten aus dem json laden und wiedergeben zu können
 def laden():
     datei_name = "sport_data.json"
     try:
-        #"r" = read file in "read-only" mode
-        with open(datei_name, "r") as open_file:
+        with open(datei_name, "r") as open_file: #"r" = read file in "read-only" mode
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = {}
