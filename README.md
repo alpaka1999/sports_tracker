@@ -1,6 +1,6 @@
-#Sports Tracker
-##!!!Überarbeiten!
-##Problembeschreibung / Motivation
+# Sports Tracker
+## !!!Überarbeiten!
+## Problembeschreibung / Motivation
  - Warum dieses Projekt
  - Welches Problem löst das Projekt
  - Was macht das Projekt
@@ -18,7 +18,7 @@ Nutzer hat die Möglichkeit, in der Analyse Filter zu nutzen.
 Das Sport-Tool löst teure Sportapps ab und kann als Eigenentwicklung 
 genutzt werden, um das Sportverhalten des Nutzers zu analysieren. 
 
-##Benutzung
+## Benutzung
 - Wie wird das Projekt benutzt
 - Welche Optionen oder auch Spezialitäten existieren
 - worauf bin ich stolz
@@ -47,16 +47,16 @@ in einem xy...diagramm (mittels Plotly) dargestellt.
 **ACHTUNG: Datenausgabe in x / y Achse. Pro Sportart möglich oder nur im 
 Total pro Mt / Woche???**
 
-##Betrieb
+## Betrieb
  - Welche zusätzliche Pakete müssen bei Bedarf installiert werden. (Muss im Normalfall nicht beachtet werden. Python muss nicht erwähnt werden, da das bei einem Python Projekt impliziert ist.)
  - Was muss man bei der Ausführung beachten. Was muss eventuell davor noch gemacht werden.
  - Welch Datei muss ausgeführt werden
 
-##Architektur
+## Architektur
 - Hier bei Bedarf eine kurze Beschreibung des Ablaufs des Programms auf Code Ebene z.B. als Ablaufdiagramm.
 - flussdiagramm rein (Grafik, 2 Sätze)
 
-##Ungelöste / unbearbeitete Probleme
+## Ungelöste / unbearbeitete Probleme
  - Selbstreflexion, Grenzen aufzeigen
  - Was wurde nicht gelöst
  - Welche Verbesserungen könnten noch gemacht werden
