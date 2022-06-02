@@ -4,6 +4,7 @@ from flask import request
 
 import piechart
 import scatterplot
+import barchart
 import daten
 
 app = Flask("Sports tracker")
@@ -66,7 +67,8 @@ def uebersicht():
 def auswertung():
     div1 = piechart.viz() #Kreisdiagramm (siehe piechart.py)
     div2 = scatterplot.viz() #Scatter Plot (siehe scatterplot.py)
-    return render_template("auswertung.html", viz_div1=div1, viz_div2=div2)
+    div3 = barchart.viz()
+    return render_template("auswertung.html", viz_piechart=div1, viz_scatterplot=div2, viz_barchart=div3)
 
 #Zum Öffnen der Startseite des Projekts kann im Browser http://127.0.0.1:5000 aufgerufen werden
 if __name__ == "__main__":

@@ -3,13 +3,13 @@ from plotly.offline import plot
 import daten
 
 def data():
-    eingabe = daten.laden() #daten von data.json werden aufgerufen
-    dauer = []
+    eingabe = daten.laden() #daten von data.json werden aufgerufen mit der Funktion laden() in daten.py
+    dauer = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
     sportart = []
 
     #ergänzt die leeren Listen dauer und sportart mit den Eingabedaten aus data.json
     for key, value in eingabe.items():
-        duration = value["Dauer"]
+        duration = int(value["Dauer"])
         sport = value["Sportart"]
         dauer.append(duration)
         sportart.append(sport)
@@ -22,7 +22,7 @@ def viz():
     dauer, sportart = data()
     fig = px.pie(values=dauer, names=sportart,
                  labels={"values": "Dauer", "names": "Sportart"},
-                 title="Erfasste Sportarten dargestellt nach Sportart und Dauer")
+                 title="Erfasste Sportarten dargestellt nach Sportart und Dauer in Minuten")
     fig.update_traces(textposition='inside', textinfo='percent+label')
     div = plot(fig, output_type="div")
     return div

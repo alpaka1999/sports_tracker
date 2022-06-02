@@ -2,10 +2,9 @@ import plotly.express as px
 from plotly.offline import plot
 import daten
 
-
 def data():
-    eingabe = daten.laden()  #daten von data.json werden aufgerufen
-    dauer = []
+    eingabe = daten.laden() #daten von data.json werden aufgerufen mit der Funktion laden() in daten.py
+    dauer = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
     distanz = []
     kalorien = []
     datum = []
