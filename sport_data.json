@@ -110,5 +110,21 @@
         "Dauer": 75,
         "Distanz": 5000,
         "Kalorien": 450
+    },
+    "2022-06-04 12:49:59.638240": {
+        "Sportart": "workout",
+        "Intensivitaet": "mittel",
+        "Datum": "2022-06-04",
+        "Dauer": 60,
+        "Distanz": 500,
+        "Kalorien": 400
+    },
+    "2022-06-06 11:48:03.236610": {
+        "Sportart": "laufen",
+        "Intensivitaet": "hart",
+        "Datum": "2022-06-06",
+        "Dauer": 60,
+        "Distanz": 10000,
+        "Kalorien": 780
     }
 }

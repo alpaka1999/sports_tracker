@@ -2,24 +2,12 @@ import plotly.express as px
 from plotly.offline import plot
 import daten
 
-def data():
-    eingabe = daten.laden() #daten von data.json werden aufgerufen mit der Funktion laden() in daten.py
-    dauer = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
-    sportart = []
 
-    #ergänzt die leeren Listen dauer und sportart mit den Eingabedaten aus data.json
-    for key, value in eingabe.items():
-        duration = int(value["Dauer"])
-        sport = value["Sportart"]
-        dauer.append(duration)
-        sportart.append(sport)
-
-    return dauer, sportart
-
-#pie-chart von Plotly https://plotly.com/python/pie-charts mit den Daten aus der Funktion data()
+#pie-chart von Plotly https://plotly.com/python/pie-charts mit den Daten aus der Funktion data.wiedergabe()
+#Daten stammen aus der Funktion wiedergabe() in daten.py. Hier wird nur der typ piechart aufgerufen.
 #in den code-snippets von Plotly wird fig.show() verwendet. fig.show() öffnet ein eigenes Browserfenster. Daher div, um Diagramm im Sports Tracker anzeigen zu können
 def viz():
-    dauer, sportart = data()
+    dauer, sportart = daten.wiedergabe("piechart")
     fig = px.pie(values=dauer, names=sportart,
                  labels={"values": "Dauer", "names": "Sportart"},
                  title="Erfasste Sportarten dargestellt nach Sportart und Dauer in Minuten")

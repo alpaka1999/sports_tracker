@@ -34,3 +34,58 @@ def laden():
         datei_inhalt = {}
 
     return datei_inhalt
+
+#Funktion, um einzelne Daten aus sport_data.json zu laden und für die Ausgabe wiederzugeben
+def wiedergabe(typ):
+    if typ == "barchart":
+        eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
+        monat = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
+        distanz = []
+        sportart = []
+
+        #ergänzt die leeren Listen monat, distanz und sportart mit den Eingabedaten aus sport_data.json
+        for key, value in eingabe.items():
+            distance = int(value["Distanz"])
+            date = value["Datum"]
+            date = date.split("-") #splitet Daten vom Datum nach - und gibt Daten dann gesplittet in einer Liste aus
+            sport = value["Sportart"]
+            distanz.append(distance)
+            monat.append(date[1]) #nimmt in der gespliteten data liste nur das mittlere Element (Monat)
+            sportart.append(sport)
+
+        return monat, distanz, sportart
+    elif typ == "piechart":
+        eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
+        dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
+        sportart = []
+
+        #ergänzt die leeren Listen dauer und sportart mit den Eingabedaten aus sport_data.json
+        for key, value in eingabe.items():
+            duration = int(value["Dauer"])
+            sport = value["Sportart"]
+            dauer.append(duration)
+            sportart.append(sport)
+
+        return dauer, sportart
+    elif typ == "scatterplot":
+        eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
+        dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
+        distanz = []
+        kalorien = []
+        datum = []
+        sportart = []
+
+        #ergänzt die leeren Listen dauer, distanz, kalorien, datum und sportart mit den Eingabedaten aus data.json
+        for key, value in eingabe.items():
+            duration = int(value["Dauer"])
+            distance = int(value["Distanz"])
+            calories = int(value["Kalorien"])
+            date = value["Datum"]
+            sport = value["Sportart"]
+            dauer.append(duration)
+            distanz.append(distance)
+            kalorien.append(calories)
+            datum.append(date)
+            sportart.append(sport)
+
+        return dauer, distanz, kalorien, datum, sportart

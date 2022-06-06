@@ -1,3 +1,4 @@
+#import aller Funktionen und Dateien, die im main.py benötigt werden
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -59,15 +60,13 @@ def uebersicht():
     #1. Eingabe bezieht sich auf eingabe in uebersicht.html. 2. Eingabe auf daten.laden() hier im main
     return render_template("uebersicht.html", eingabe=eingabe)
 
-#Auswertungsseite: Auswertungen mit Kreisdiagramm, Scatter Plot und Rangliste in Form von Tabelle
-#NOTE: noch nicht fertig
-#Idee: Rangliste mit Top-Sportarten: Durchschnittswerte von Sportarten werden angezeigt (for loop? leeres dict? leere liste?).
-#Idee: dann wird min / max, wie viele trackings pro Sportart, durchschnittsdauer, distanz und kal. angezeigt
+#Auswertungsseite: Auswertungen mit Kreisdiagramm, Scatter Plot und Balkendiagramm
+#Diagramme sind jeweils in einer separaten Python File
 @app.route("/auswertung")
 def auswertung():
     div1 = piechart.viz() #Kreisdiagramm (siehe piechart.py)
     div2 = scatterplot.viz() #Scatter Plot (siehe scatterplot.py)
-    div3 = barchart.viz()
+    div3 = barchart.viz() #Balkendieagramm (siehe barchart.py)
     return render_template("auswertung.html", viz_piechart=div1, viz_scatterplot=div2, viz_barchart=div3)
 
 #Zum Öffnen der Startseite des Projekts kann im Browser http://127.0.0.1:5000 aufgerufen werden
