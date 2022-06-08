@@ -4,7 +4,8 @@
  - Warum dieses Projekt
  - Welches Problem löst das Projekt
  - Was macht das Projekt
- - Lückenfüller wie: "Dieses Projekt wurde im Rahmen des Programmieren2 Modules an der FHGR gemacht" oder ähnlich sind unnötig. Auch sollten keine Klarnamen, oder Orte genannt werden.
+ - Lückenfüller wie: "Dieses Projekt wurde im Rahmen des Programmieren2 Modules an der FHGR gemacht" oder ähnlich 
+   sind unnötig. Auch sollten keine Klarnamen, oder Orte genannt werden.
 
 Im Rahmen des Moduls PROG2 hatten die Studierenden den Auftrag, 
 eine Webapp zu erstellen, die Daten speichern, verarbeiten und 
@@ -47,10 +48,11 @@ in einem xy...diagramm (mittels Plotly) dargestellt.
 **ACHTUNG: Datenausgabe in x / y Achse. Pro Sportart möglich oder nur im 
 Total pro Mt / Woche???**
 
-## Betrieb
- - Welche zusätzliche Pakete müssen bei Bedarf installiert werden. (Muss im Normalfall nicht beachtet werden. Python muss nicht erwähnt werden, da das bei einem Python Projekt impliziert ist.)
- - Was muss man bei der Ausführung beachten. Was muss eventuell davor noch gemacht werden.
- - Welch Datei muss ausgeführt werden
+## Betrieb / Instalation
+Alle nötigen Module sind im requirements.txt File aufgelistet. Die benötigten Module können mit dem Befehl `pip 
+install -r requirements.txt` installiert werden. Weitere Infos dazu hier: https://www.delftstack.com/de/howto/python/python-create-requirements.txt/
+
+Nach der Installation aller benötigten Pakete kann das Projekt mit der `python3 main.py` Datei ausgeführt werden.
 
 ## Architektur
 - Hier bei Bedarf eine kurze Beschreibung des Ablaufs des Programms auf Code Ebene z.B. als Ablaufdiagramm.

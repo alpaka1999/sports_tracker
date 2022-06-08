@@ -1,0 +1,20 @@
+<!-- Definition Layout mit header, nav, footer und block content
+gem. https://flask.palletsprojects.com/en/2.1.x/patterns/templateinheritance/ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Bootstrap CSS wird geladen -->
+        <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+        <!-- Browsericon (favicon) aus static -->
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico') }}">
+        <!-- Title Block wird in den Titel eingefügt  -->
+        <title>Sports Tracker - {% block title %}{% endblock %}</title>
+    </head>
+    {% include "nav.html" %}
+    <body>
+        <!-- Content Block wird hier eingefügt. -->
+        {% block content %}{% endblock %}
+        <!-- Bootstrap JavaScript wird geladen -->
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    </body>
+</html>

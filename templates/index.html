@@ -1,7 +1,10 @@
-<!-- Übernahme header -->
-{% include "header.html" %}
+<!-- verwendet layout.html als Vorlage -->
+{% extends "layout.html" %}
 <!-- Diese Seite ist die Startseite des Sport Trackers. Von hier aus kann der User auf die verschiedenen Bereiche des
  Sport Trackers wechseln. --->
+<!-- Seitentitel wird definiert -->
+{% block title %}Startseite{% endblock %}
+<!-- Seiteninhalt wird definiert -->
 {% block content %}
 <div class="container">
     </br>
@@ -39,5 +42,3 @@
     </div>
 </div>
 {% endblock %}
-<!-- Übernahme footer -->
-{% include "footer.html" %}

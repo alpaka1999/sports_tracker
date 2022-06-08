@@ -1,6 +1,9 @@
-<!-- Übernahme header -->
-{% include "header.html" %}
+<!-- verwendet layout.html als Vorlage -->
+{% extends "layout.html" %}
 <!-- Dies ist die Formularseite zur Erstellung von neuen Einträgen. Die Daten von Sportaivitäten können hier erfasst werden. -->
+<!-- Seitentitel wird definiert -->
+{% block title %}Neuer Eintrag{% endblock %}
+<!-- Seiteninhalt wird definiert -->
 {% block content %}
 <div class="container">
     </br>
@@ -58,7 +61,3 @@
     </form>
 </div>
 {% endblock %}
-<!-- Übernahme footer -->
-{% include "footer.html" %}
-
-<!-- ACHTUNG: Nach Erfassung muss noch Speicherung der Daten in Betracht gezogen werden!!! -->

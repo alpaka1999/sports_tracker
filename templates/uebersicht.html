@@ -1,7 +1,10 @@
-<!-- Übernahme header -->
-{% include "header.html" %}
+<!-- verwendet layout.html als Vorlage -->
+{% extends "layout.html" %}
 <!-- Die Übersichts-Seite zeigt dem User die erfassten Tracking-Daten, die unter "Neuer Eintrag" eingegeben wurden und
 im sport_data.json gespeichert sind.-->
+<!-- Seitentitel wird definiert -->
+{% block title %}Uebersicht{% endblock %}
+<!-- Seiteninhalt wird definiert -->
 {% block content %}
 <div class="container">
     </br>
@@ -38,5 +41,3 @@ im sport_data.json gespeichert sind.-->
     </table>
 </div>
 {% endblock %}
-<!-- Übernahme footer -->
-{% include "footer.html" %}

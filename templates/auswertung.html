@@ -1,6 +1,9 @@
-<!-- Übernahme header -->
-{% include "header.html" %}
-<!-- was macht Seite?-->
+<!-- verwendet layout.html als Vorlage -->
+{% extends "layout.html" %}
+<!-- ANPASSEN: Die Auswertung kannst du all deine erfassten Sportdaten ausgewertet einsehen.-->
+<!-- Seitentitel wird definiert -->
+{% block title %}Auswertung{% endblock %}
+<!-- Seiteninhalt wird definiert -->
 {% block content %}
 <div class="container">
     </br>
@@ -24,5 +27,3 @@
     </div>
 </div>
 {% endblock %}
-<!-- Übernahme footer -->
-{% include "footer.html" %}

@@ -1,6 +1,9 @@
-<!-- Übernahme header -->
-{% include "header.html" %}
+<!-- verwendet layout.html als Vorlage -->
+{% extends "layout.html" %}
 <!-- Bei der Seite handelt es sich um eine Invalid URL Error Page-->
+<!-- Seitentitel wird definiert -->
+{% block title %}Seite nicht gefunden{% endblock %}
+<!-- Seiteninhalt wird definiert -->
 {% block content %}
 <div class="container">
     <center>
@@ -10,5 +13,3 @@
     </center>
 </div>
 {% endblock %}
-<!-- Übernahme footer -->
-{% include "footer.html" %}
