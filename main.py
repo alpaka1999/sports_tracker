@@ -8,6 +8,7 @@ import scatterplot
 import barchart
 import daten
 
+#Installation Flask mit der App-Bennenung "Sports tracker"
 app = Flask("Sports tracker")
 
 """
@@ -16,12 +17,12 @@ PROG1 und PROG2 sowie die Tutoring-Sessions genutzt. Weitere Quellen wie Youtube
 stackoverflow, die Bootstrap Dokumentation oder w3schools wurden für die Ausarbeitung des Projekts beigezogen.
 """
 
-#Custom Error Page: Invalid URL: 404
+#Custom Error Page: Invalid URL: 404 nach https://www.youtube.com/watch?v=3O4ZmH5aolg
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
 
-#Custom Error Page: Internal Server Error: 500
+#Custom Error Page: Internal Server Error: 500 nach https://www.youtube.com/watch?v=3O4ZmH5aolg
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template("500.html"), 500
@@ -57,7 +58,6 @@ def tracker():
 @app.route("/uebersicht")
 def uebersicht():
     eingabe = daten.laden()
-    #1. Eingabe bezieht sich auf eingabe in uebersicht.html. 2. Eingabe auf daten.laden() hier im main
     return render_template("uebersicht.html", eingabe=eingabe)
 
 #Auswertungsseite: Auswertungen mit Berechnung Gesamtdauer in Stunde & Kreisdiagramm, Scatter Plot und Balkendiagramm
@@ -70,6 +70,6 @@ def auswertung():
     div3 = barchart.viz() #Balkendieagramm (siehe barchart.py)
     return render_template("auswertung.html", gesamtdauer=gesamtdauer, viz_piechart=div1, viz_scatterplot=div2, viz_barchart=div3)
 
-#Zum Öffnen der Startseite des Projekts kann im Browser http://127.0.0.1:5000 aufgerufen werden
+#Zum Öffnen der Startseite des Sport Trackers kann im Browser http://127.0.0.1:5000 aufgerufen werden
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

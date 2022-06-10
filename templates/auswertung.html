@@ -1,6 +1,6 @@
 <!-- verwendet layout.html als Vorlage -->
 {% extends "layout.html" %}
-<!-- ANPASSEN: Die Auswertung kannst du all deine erfassten Sportdaten ausgewertet einsehen.-->
+<!-- Die Auswertung zeigt alle erfassten Sportdaten aus sport_data.json in verschiedenen Auswertungen an.-->
 <!-- Seitentitel wird definiert -->
 {% block title %}Auswertung{% endblock %}
 <!-- Seiteninhalt wird definiert -->
@@ -10,24 +10,28 @@
     <h1>Auswertung</h1>
     <p>Hier kannst du all deine erfassten Sportdaten ausgewertet einsehen.</p>
     </br>
+    <!-- Gesamtdauer in Stunden -->
     <div class="row">
         <div class="col">
-            <p>Die Gesamtdauer deiner erfassten Sportdaten beträgt <b>{{ gesamtdauer }}</b> Stunden.</p> <!-- Gesamtdauer in Stunden -->
+            <p>Die Gesamtdauer deiner erfassten Sportdaten beträgt <b>{{ gesamtdauer }}</b> Stunden.</p>
         </div>
     </div>
+    <!-- Pie-Chart Diagramm -->
     <div class="row">
         <div class="col">
-            {{ viz_piechart|safe }} <!-- Pie-Chart Diagramm -->
+            {{ viz_piechart|safe }}
         </div>
     </div>
+    <!-- Bar-Chart Diagramm -->
     <div class="row">
         <div class="col">
-            {{ viz_barchart|safe }} <!-- Scatter Plot Diagramm -->
+            {{ viz_barchart|safe }}
         </div>
     </div>
+    <!-- Scatter Plot Diagramm -->
     <div class="row">
         <div class="col">
-            {{ viz_scatterplot|safe }} <!-- Scatter Plot Diagramm -->
+            {{ viz_scatterplot|safe }}
         </div>
     </div>
 </div>

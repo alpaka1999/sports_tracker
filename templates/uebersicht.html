@@ -1,7 +1,7 @@
 <!-- verwendet layout.html als Vorlage -->
 {% extends "layout.html" %}
 <!-- Die Übersichts-Seite zeigt dem User die erfassten Tracking-Daten, die unter "Neuer Eintrag" eingegeben wurden und
-im sport_data.json gespeichert sind.-->
+in sport_data.json gespeichert sind.-->
 <!-- Seitentitel wird definiert -->
 {% block title %}Uebersicht{% endblock %}
 <!-- Seiteninhalt wird definiert -->
@@ -11,6 +11,7 @@ im sport_data.json gespeichert sind.-->
     <h1>Übersicht</h1>
     <p>Hier siehst du eine Übersicht all deiner erfassten Sportdaten.</p>
     </br>
+    <!-- Inahlte werden in einer Tabelle wiedergegeben -->
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -25,7 +26,7 @@ im sport_data.json gespeichert sind.-->
         </thead>
         <tbody>
         <!-- items sind die einzelnen Eingaben (unterteilt nach Eingabedatum) aus dem dict in sport_data.json.
-        Pro Zeile nimmt es hier die values vom Key, der in [] steht. -->
+        Pro Zeile nimmt es hier der value vom key, der in [] steht. -->
         {% for key, value in eingabe.items() %}
         <tr>
             <td>{{ key }}</td>

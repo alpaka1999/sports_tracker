@@ -1,3 +1,4 @@
+#import aller Funktionen und Dateien, die im daten.py benötigt werden
 from datetime import datetime
 import json
 
@@ -11,8 +12,8 @@ def speichern(sportart, intensivitaet, datum, dauer, distanz, kalorien):
     except FileNotFoundError:
         datei_inhalt = {}
 
-    #erstellt im json ein dict mit den Inhalten pro Eingabe unter tracker.html
-    #als Key für die json-Datei wird das Erfassungsdatum der Daten erfasst mit datetime.now()
+    #erstellt im json ein dict mit den Inhalten pro Eingabe unter tracker.html (als value)
+    #als key für die json-Datei wird das Erfassungsdatum der Daten erfasst mit datetime.now()
     datei_inhalt[str(datetime.now())] = {"Sportart": sportart,
                                          "Intensivitaet": intensivitaet,
                                          "Datum": datum,
@@ -45,18 +46,16 @@ def gesamtdauer():
         duration = int(value["Dauer"])
         dauer.append(duration)
         summe_dauer = 0
-
         #nimmt die einzelnen Elemente in der Liste Dauer und zählt diese via foor-loop zu summe_dauer
         for zahlen in dauer:
             summe_dauer += zahlen
-
         #wiedergibt die gesamtdauer in Stunden
         summe_stunde = summe_dauer / 60
 
     return summe_stunde
 
 #Funktion, um einzelne Daten aus sport_data.json zu laden und für die Ausgabe wiederzugeben
-def wiedergabe(typ):
+def diagramme(typ):
     if typ == "barchart":
         eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
         monat = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird

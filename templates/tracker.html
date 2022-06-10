@@ -9,11 +9,12 @@
     </br>
     <h1>Neuer Eintrag</h1>
     <p>Fülle das Formular aus, um die Daten deiner Sportaktivitäten zu erfassen.</p>
-    <!-- hier erscheint nach nachdem der Button "Daten speichern" gedrückt wird die success_message aus main.py  -->
+    <!-- hier erscheint nachdem der Button "Daten speichern" gedrückt wird die success_message aus main.py  -->
     <p style="color: green;"><i>{{ success_message }}</i></p>
     </br>
     <!-- Die Klasse was-validated führt dazu, dass bei fehlenden Daten ein Hinweis zur Ausfüllung vom Feld angezeigt wird -->
     <form method="POST" class="was-validated">
+        <!-- Dropdown Sportarten -->
         <div class="form-group">
             <label for="sportart">Welche Sportart hast du durchgeführt?</label>
             <select class="form-control" name="sportart" id="sportart" required>
@@ -26,6 +27,7 @@
             </select>
             <div class="invalid-feedback">Sportart wählen</div>
         </div>
+        <!-- Dropdown Trainings-Intensivität -->
         <div class="form-group">
             <label for="intensivitaet">Wie intensiv war dein Training?</label>
             <select class="form-control" name="intensivitaet" id="intensivitaet" required>
@@ -36,21 +38,25 @@
             </select>
             <div class="invalid-feedback">Intensität angeben</div>
         </div>
+        <!-- Dropdown Datum -->
         <div class="form-group">
             <label for="datum">Wann hast du die Sportart ausgeführt?</label>
             <input type="date" name="datum" class="form-control" id="datum" placeholder="Datum" required>
             <div class="invalid-feedback">Datum eingeben</div>
         </div>
+        <!-- Textfeld Dauer in Minuten in Zahl -->
         <div class="form-group">
             <label for="dauer">Wie lange dauerte dein Training?</label>
             <input type="number" name="dauer" class="form-control" id="dauer" placeholder="Zeit in Minuten" required>
             <div class="invalid-feedback">Dauer eingeben</div>
         </div>
+        <!-- Textfeld in Zahl Anzahl Schritte in Zahl -->
         <div class="form-group">
             <label for="distanz">Wie viele Schritte hast du während dem Training zurückgelegt?</label>
             <input type="number" name="distanz" class="form-control" id="distanz" placeholder="Anzahl Schritte" required>
             <div class="invalid-feedback">Anzahl Schritte eingeben</div>
         </div>
+        <!-- Textfeld in Zahl Kalender in Zahl -->
         <div class="form-group">
             <label for="kalorien">Wie viele Kalorien hast du während dem Training verbrannt?</label>
             <input type="number" name="kalorien" class="form-control" id="kalorien" placeholder="Anzahl Kalorien" required>
