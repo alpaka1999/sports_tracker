@@ -60,14 +60,15 @@ def uebersicht():
     #1. Eingabe bezieht sich auf eingabe in uebersicht.html. 2. Eingabe auf daten.laden() hier im main
     return render_template("uebersicht.html", eingabe=eingabe)
 
-#Auswertungsseite: Auswertungen mit Kreisdiagramm, Scatter Plot und Balkendiagramm
-#Diagramme sind jeweils in einer separaten Python File
+#Auswertungsseite: Auswertungen mit Berechnung Gesamtdauer in Stunde & Kreisdiagramm, Scatter Plot und Balkendiagramm
+#Diagramme sind jeweils in einem separaten Python File
 @app.route("/auswertung")
 def auswertung():
+    gesamtdauer = daten.gesamtdauer() #gesamtdauer in Stunden
     div1 = piechart.viz() #Kreisdiagramm (siehe piechart.py)
     div2 = scatterplot.viz() #Scatter Plot (siehe scatterplot.py)
     div3 = barchart.viz() #Balkendieagramm (siehe barchart.py)
-    return render_template("auswertung.html", viz_piechart=div1, viz_scatterplot=div2, viz_barchart=div3)
+    return render_template("auswertung.html", gesamtdauer=gesamtdauer, viz_piechart=div1, viz_scatterplot=div2, viz_barchart=div3)
 
 #Zum Öffnen der Startseite des Projekts kann im Browser http://127.0.0.1:5000 aufgerufen werden
 if __name__ == "__main__":

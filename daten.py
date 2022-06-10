@@ -35,6 +35,26 @@ def laden():
 
     return datei_inhalt
 
+#Funtkion, um Gesamtdauer aller Sportarten in Stunden zu berechnen
+def gesamtdauer():
+    eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden() n daten.py
+    dauer = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
+
+    #ergänzt die leeren Listen dauer mit den Eingabedaten aus sport_data.json
+    for key, value in eingabe.items():
+        duration = int(value["Dauer"])
+        dauer.append(duration)
+        summe_dauer = 0
+
+        #nimmt die einzelnen Elemente in der Liste Dauer und zählt diese via foor-loop zu summe_dauer
+        for zahlen in dauer:
+            summe_dauer += zahlen
+
+        #wiedergibt die gesamtdauer in Stunden
+        summe_stunde = summe_dauer / 60
+
+    return summe_stunde
+
 #Funktion, um einzelne Daten aus sport_data.json zu laden und für die Ausgabe wiederzugeben
 def wiedergabe(typ):
     if typ == "barchart":
@@ -54,6 +74,7 @@ def wiedergabe(typ):
             sportart.append(sport)
 
         return monat, distanz, sportart
+
     elif typ == "piechart":
         eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
         dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
@@ -67,6 +88,7 @@ def wiedergabe(typ):
             sportart.append(sport)
 
         return dauer, sportart
+
     elif typ == "scatterplot":
         eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
         dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
