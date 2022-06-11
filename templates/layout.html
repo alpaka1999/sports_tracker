@@ -6,7 +6,7 @@ gem. https://flask.palletsprojects.com/en/2.1.x/patterns/templateinheritance/ --
         <!-- Bootstrap CSS wird geladen -->
         <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
         <!-- Browsericon (favicon) aus static -->
-        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico') }}">
         <!-- Title Block wird in den Titel eingefügt  -->
         <title>Sports Tracker - {% block title %}{% endblock %}</title>
     </head>
