@@ -50,6 +50,7 @@ der Nutzer dem weiteren die errechnete Gesamtdauer der erfassten Sportdaten.
 
 ## Architektur
 Das nachfolgende Diagramm zeigt den Ablauf der Webapp vereinfacht dar.
+
 ![Flussdiagramm Sports Tracker](./static/images/ablaufdiagramm.png)
 
 ## Unbearbeitetet
