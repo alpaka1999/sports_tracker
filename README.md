@@ -1,7 +1,6 @@
 # Sports Tracker
 ***
 ## Inhalt
-***
 1. [Problembeschreibung / Motivation](#problembeschreibung-/-motivation)
 2. [Betrieb / Instalation](#betrieb-/-instalation)
 3. [Benutzung](#benutzung)
@@ -9,7 +8,6 @@
 5. [Ungelöste / unbearbeitete Probleme](ungeloeste-/-unbearbeitete-probleme)
 
 ## Problembeschreibung / Motivation
-***
 Im Rahmen des Moduls PROG2 hatten die Studierenden den Auftrag, eine Webapp mit Python, Flask, Bootstrap (html, css, 
 JavaScript), Json und Jinja zu erstellen, die Daten speichern, verarbeiten und wiedergeben kann.
 
@@ -21,7 +19,6 @@ Das Sport-Tool löst teure Sportapps ab und kann als Eigenentwicklung genutzt we
 zu tracken und im nachhinein zu analysieren. 
 
 ## Betrieb / Instalation
-***
 Alle nötigen Module sind im requirements.txt File aufgelistet. Die benötigten Module können mit dem Befehl `pip 
 install -r requirements.txt` installiert werden. Weitere Infos dazu hier: 
 https://www.delftstack.com/de/howto/python/python-create-requirements.txt/
@@ -30,7 +27,6 @@ Nach der Installation aller benötigten Pakete kann das Projekt mit der `python3
 im Browser über http://127.0.0.1:5000 aufgerufen werden.
 
 ## Benutzung
-***
 Der Sports Tracker ist so aufgebaut, dass der Nutzer direkt auf der Startseite auf alle verlinkten Menüseiten wechseln
 kann. Der Nutzer kann von der Startseite aus einen neuen Eintrag erstellen, die erfassten Daten in der Übersicht 
 einsehen und in der Auswertung ausgewertet anschauen. 
@@ -53,15 +49,10 @@ Sportdaten nach Monat und Distanz sowie ein Diagramm mit der Korrelation aller S
 der Nutzer dem weiteren die errechnete Gesamtdauer der erfassten Sportdaten.
 
 ## Architektur
-***
-- Hier bei Bedarf eine kurze Beschreibung des Ablaufs des Programms auf Code Ebene z.B. als Ablaufdiagramm.
-- flussdiagramm rein (Grafik, 2 Sätze)
-
 Das nachfolgende Diagramm zeigt den Ablauf der Webapp vereinfacht dar.
 ![Flussdiagramm Sports Tracker](./static/images/ablaufdiagramm.png)
 
 ## Ungelöste / unbearbeitete Probleme
-***
 Die Webapp erfüllt die Kriterien der Dateneingabe, -speicherung und -ausgabe. Die Datenausgabe wertet die Daten in 
 vorgegebenen Plotly-Diagrammen aus, bei denen jeweils einzelne Sportarten ein- oder ausgeblendet werden können. Eine 
 zusätzliche Filterfunktion bei der Übersichtsseite könnte dem Nutzer von Vorteil sein, um weitere Einsichten zu den 
