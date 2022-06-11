@@ -1,13 +1,13 @@
 # Sports Tracker
 ***
 ## Inhalt
-1. [Problembeschreibung / Motivation](#problembeschreibung-/-motivation)
-2. [Betrieb / Instalation](#betrieb-/-instalation)
+1. [Problembeschreibung](#problembeschreibung)
+2. [Betrieb](#betrieb)
 3. [Benutzung](#benutzung)
 4. [Architektur](#architektur)
-5. [Ungelöste / unbearbeitete Probleme](ungeloeste-/-unbearbeitete-probleme)
+5. [Unbearbeitete Probleme](unbearbeitete-probleme)
 
-## Problembeschreibung / Motivation
+## Problembeschreibung
 Im Rahmen des Moduls PROG2 hatten die Studierenden den Auftrag, eine Webapp mit Python, Flask, Bootstrap (html, css, 
 JavaScript), Json und Jinja zu erstellen, die Daten speichern, verarbeiten und wiedergeben kann.
 
@@ -18,7 +18,7 @@ diverse Auswertungen der eingegebenen Sportdaten sowie die Gesamtdauer der erfas
 Das Sport-Tool löst teure Sportapps ab und kann als Eigenentwicklung genutzt werden, um das Sportverhalten des Nutzers 
 zu tracken und im nachhinein zu analysieren. 
 
-## Betrieb / Instalation
+## Betrieb
 Alle nötigen Module sind im requirements.txt File aufgelistet. Die benötigten Module können mit dem Befehl `pip 
 install -r requirements.txt` installiert werden. Weitere Infos dazu hier: 
 https://www.delftstack.com/de/howto/python/python-create-requirements.txt/
@@ -52,7 +52,7 @@ der Nutzer dem weiteren die errechnete Gesamtdauer der erfassten Sportdaten.
 Das nachfolgende Diagramm zeigt den Ablauf der Webapp vereinfacht dar.
 ![Flussdiagramm Sports Tracker](./static/images/ablaufdiagramm.png)
 
-## Ungelöste / unbearbeitete Probleme
+## Unbearbeitete Probleme
 Die Webapp erfüllt die Kriterien der Dateneingabe, -speicherung und -ausgabe. Die Datenausgabe wertet die Daten in 
 vorgegebenen Plotly-Diagrammen aus, bei denen jeweils einzelne Sportarten ein- oder ausgeblendet werden können. Eine 
 zusätzliche Filterfunktion bei der Übersichtsseite könnte dem Nutzer von Vorteil sein, um weitere Einsichten zu den 
