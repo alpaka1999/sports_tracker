@@ -5,7 +5,7 @@
 2. [Betrieb](#betrieb)
 3. [Benutzung](#benutzung)
 4. [Architektur](#architektur)
-5. [Unbearbeitete Probleme](unbearbeitete-probleme)
+5. [Unbearbeitetet](#unbearbeitetet)
 
 ## Problembeschreibung
 Im Rahmen des Moduls PROG2 hatten die Studierenden den Auftrag, eine Webapp mit Python, Flask, Bootstrap (html, css, 
@@ -52,7 +52,7 @@ der Nutzer dem weiteren die errechnete Gesamtdauer der erfassten Sportdaten.
 Das nachfolgende Diagramm zeigt den Ablauf der Webapp vereinfacht dar.
 ![Flussdiagramm Sports Tracker](./static/images/ablaufdiagramm.png)
 
-## Unbearbeitete Probleme
+## Unbearbeitetet
 Die Webapp erfüllt die Kriterien der Dateneingabe, -speicherung und -ausgabe. Die Datenausgabe wertet die Daten in 
 vorgegebenen Plotly-Diagrammen aus, bei denen jeweils einzelne Sportarten ein- oder ausgeblendet werden können. Eine 
 zusätzliche Filterfunktion bei der Übersichtsseite könnte dem Nutzer von Vorteil sein, um weitere Einsichten zu den 
