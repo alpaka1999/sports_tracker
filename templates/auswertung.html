@@ -16,22 +16,12 @@
             <p>Die Gesamtdauer deiner erfassten Sportdaten beträgt <b>{{ gesamtdauer }}</b> Stunden.</p>
         </div>
     </div>
-    <!-- Pie-Chart Diagramm -->
+    <!-- Diagramme -->
     <div class="row">
         <div class="col">
-            {{ viz_piechart|safe }}
-        </div>
-    </div>
-    <!-- Bar-Chart Diagramm -->
-    <div class="row">
-        <div class="col">
-            {{ viz_barchart|safe }}
-        </div>
-    </div>
-    <!-- Scatter Plot Diagramm -->
-    <div class="row">
-        <div class="col">
-            {{ viz_scatterplot|safe }}
+            {{ viz_piechart|safe }} <!-- Pie-Chart Diagramm -->
+            {{ viz_barchart|safe }} <!-- Bar-Chart Diagramm -->
+            {{ viz_scatterplot|safe }} <!-- Scatter Plot Diagramm -->
         </div>
     </div>
 </div>

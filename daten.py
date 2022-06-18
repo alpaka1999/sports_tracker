@@ -38,17 +38,17 @@ def laden():
 
 #Funtkion, um Gesamtdauer aller Sportarten in Stunden zu berechnen
 def gesamtdauer():
-    eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden() n daten.py
+    eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
     dauer = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
 
-    #ergänzt die leeren Listen dauer mit den Eingabedaten aus sport_data.json
+    #ergänzt die leeren Listen "dauer" mit den Eingabedaten aus sport_data.json
     for key, value in eingabe.items():
         duration = int(value["Dauer"])
-        dauer.append(duration)
+        dauer.append(duration) #alle elemente zum value "Dauer" aus sport_data.json werden in die Liste "dauer" hinzugefügt
         summe_dauer = 0
         #nimmt die einzelnen Elemente in der Liste Dauer und zählt diese via foor-loop zu summe_dauer
-        for zahlen in dauer:
-            summe_dauer += zahlen
+        for zahl in dauer:
+            summe_dauer += zahl
         #wiedergibt die gesamtdauer in Stunden
         summe_stunde = summe_dauer / 60
 
@@ -56,26 +56,8 @@ def gesamtdauer():
 
 #Funktion, um einzelne Daten aus sport_data.json zu laden und für die Ausgabe wiederzugeben
 def diagramme(typ):
-    if typ == "barchart":
-        eingabe = laden() #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
-        monat = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
-        distanz = []
-        sportart = []
-
-        #ergänzt die leeren Listen monat, distanz und sportart mit den Eingabedaten aus sport_data.json
-        for key, value in eingabe.items():
-            distance = int(value["Distanz"])
-            date = value["Datum"]
-            date = date.split("-") #splitet Daten vom Datum nach - und gibt Daten dann gesplittet in einer Liste aus
-            sport = value["Sportart"]
-            distanz.append(distance)
-            monat.append(date[1]) #nimmt in der gespliteten data liste nur das mittlere Element (Monat)
-            sportart.append(sport)
-
-        return monat, distanz, sportart
-
-    elif typ == "piechart":
-        eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
+    if typ == "piechart":
+        eingabe = laden()  #daten von sport_data.json werden aufgerufen mit der Funktion laden()
         dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
         sportart = []
 
@@ -88,8 +70,26 @@ def diagramme(typ):
 
         return dauer, sportart
 
+    elif typ == "barchart":
+        eingabe = laden() #daten von sport_data.json werden aufgerufen mit der Funktion laden()
+        monat = [] #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
+        distanz = []
+        sportart = []
+
+        #ergänzt die leeren Listen monat, distanz und sportart mit den Eingabedaten aus sport_data.json
+        for key, value in eingabe.items():
+            distance = int(value["Distanz"])
+            date = value["Datum"]
+            date = date.split("-") #splitet Daten vom Datum nach - und gibt Daten dann gesplittet in einer Liste aus
+            sport = value["Sportart"]
+            distanz.append(distance)
+            monat.append(date[1]) #nimmt in der gespliteten date liste nur das mittlere Element (Monat)
+            sportart.append(sport)
+
+        return monat, distanz, sportart
+
     elif typ == "scatterplot":
-        eingabe = laden()  #daten von sport_data.jso werden aufgerufen mit der Funktion laden()
+        eingabe = laden()  #daten von sport_data.json werden aufgerufen mit der Funktion laden()
         dauer = []  #leere Listen, die dann mit Daten aus sport_data.json ergänzt wird
         distanz = []
         kalorien = []

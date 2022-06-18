@@ -16,5 +16,3 @@ def viz():
     fig.update_layout(xaxis={'categoryorder':'category ascending'})
     div = plot(fig, output_type="div")
     return div
-
-#zusammen hast du xy stunden sport gemacht

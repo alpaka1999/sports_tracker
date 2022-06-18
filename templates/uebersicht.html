@@ -26,7 +26,7 @@ in sport_data.json gespeichert sind.-->
         </thead>
         <tbody>
         <!-- items sind die einzelnen Eingaben (unterteilt nach Eingabedatum) aus dem dict in sport_data.json.
-        Pro Zeile nimmt es hier der value vom key, der in [] steht. -->
+        Der Key ist das Erfassungsdatum gem. sport_data.json. Pro Zeile nimmt es hier der value vom key, der in [] steht. -->
         {% for key, value in eingabe.items() %}
         <tr>
             <td>{{ key }}</td>

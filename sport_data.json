@@ -142,5 +142,29 @@
         "Dauer": 60,
         "Distanz": 1000,
         "Kalorien": 455
+    },
+    "2022-06-11 14:29:02.293737": {
+        "Sportart": "tennis",
+        "Intensivitaet": "hart",
+        "Datum": "2022-06-11",
+        "Dauer": 180,
+        "Distanz": 5000,
+        "Kalorien": 670
+    },
+    "2022-06-18 10:38:57.617063": {
+        "Sportart": "tennis",
+        "Intensivitaet": "leicht",
+        "Datum": "2022-06-18",
+        "Dauer": 60,
+        "Distanz": 2000,
+        "Kalorien": 5000
+    },
+    "2022-06-18 10:50:06.131475": {
+        "Sportart": "fahrradfahren",
+        "Intensivitaet": "hart",
+        "Datum": "2022-06-17",
+        "Dauer": 180,
+        "Distanz": 40000,
+        "Kalorien": 5500
     }
 }
